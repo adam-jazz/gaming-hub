@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game Leaderboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="loadGame()">
+<header>
+  <h1 id="gameTitle"></h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="account.html">Account</a>
+  </nav>
+  <div class="user-box">
+  <span id="userGreeting"></span>
+  <img id="navProfilePic" src="images/default.png">
+</div>
+  <button onclick="toggleDarkMode()" id="themeBtn">🌙</button>
+</header>
+
+<section>
+  <h2>Top Players</h2>
+  <table id="gameTable"></table>
+</section>
+
+<section class="play-section">
+  <button class="play-now" onclick="playGame()">▶ Play Now</button>
+</section>
+
+<section class="info-section">
+
+  <div class="info-box">
+    <h2>📜 Game Rules</h2>
+    <ul id="gameRules"></ul>
+  </div>
+
+  <div class="info-box">
+    <h2>💰 How to Earn Points</h2>
+    <ul id="gamePoints"></ul>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

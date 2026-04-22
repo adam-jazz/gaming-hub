@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaming Hub - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body onload=" loadTheme()">
+  <header>
+    <h1>Gaming Hub</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="account.html">Account</a>
+      <a href="games.html">Games</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="contact-us.html">Contact-Us</a>
+    </nav>
+    <div class="user-box">
+  <span id="userGreeting"></span>
+  <img id="navProfilePic" src="images/default.png">
+</div>
+    <button onclick="toggleDarkMode()" id="themeBtn">🌙</button>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome Gamers 🎮</h2>
+    <p>Join the ultimate gaming community</p>
+    <img src="images/banner.jpeg" alt="Gaming Banner" class="hero-img">
+  </section>
+
+  <section class="preview">
+    <h2>Featured Games</h2>
+    <div class="game-container">
+      <div class="card">
+        <p>CS2</p>
+        <img src="images/cs2.jpg" alt="CS2" width="100%">
+      </div>
+      <div class="card">
+        <p>Valorant</p>
+        <img src="images/valorant.jpg" alt="Valorant" width="100%">
+      </div>
+      <div class="card">
+        <p>Fortnite</p>
+        <img src="images/fortnite.jpg" alt="Fortnite" width="100%">
+      </div>
+      <div class="card">
+        <p>Fifa</p>
+        <img src="images/fifa.jpg" alt="Fifa" width="100%">
+      </div>
+      <div class="card">
+        <p>COD</p>
+        <img src="images/COD.webp" alt="COD" width="100%">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Gaming Hub</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
