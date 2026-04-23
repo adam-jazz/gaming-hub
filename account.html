@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="initAccountPage()">
+
+<header>
+  <h1>Gaming Hub Account</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="leaderboard.html">Leaderboard</a>
+    <a href="contact-us.html">Contact-Us</a>
+  </nav>
+  <div class="user-box">
+  <span id="userGreeting"></span>
+  <img id="navProfilePic" src="images/default.png">
+</div>
+  <button onclick="toggleDarkMode()" id="themeBtn">🌙</button>
+</header>
+
+ <section id="authSection" style="display:none;" class="dashboard">
+<div class="auth-container">
+
+  <div class="auth-tabs">
+    <button id="loginTab" class="active" onclick="showLogin()">Login</button>
+    <button id="registerTab" onclick="showRegister()">Register</button>
+    <div class="slider"></div>
+  </div>
+
+  <div id="loginForm" class="auth-form">
+    <h2>Login</h2>
+    <form onsubmit="return loginUser()">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div id="registerForm" class="auth-form hidden">
+    <h2>Register</h2>
+    <form onsubmit="return registerUser()">
+      <input type="text" id="regName" placeholder="Username" required>
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPassword" placeholder="Password" required>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+</div>
+</section>
+
+<section id="profileSection" style="display:none;" class="dashboard">
+<div id="toast"></div>
+  <h2 id="welcomeText"></h2>
+
+  <div class="card">
+    <h3>User Info</h3>
+    <p id="profileName"></p>
+    <p id="profileEmail"></p>
+
+    <input type="text" id="newName" placeholder="New Username">
+    <button onclick="updateUsername()">Update Username</button>
+
+    <br><br>
+    <button onclick="logoutUser()">Logout</button>
+  </div>
+<h3>Profile Picture</h3>
+
+<img id="profilePic" src="images/default.png" width="120" style="border-radius:50%;">
+
+<br><br>
+
+<input type="file" id="uploadPic" accept="image/*">
+<button onclick="uploadProfilePic()">Upload</button>
+  <div class="dashboard-cards">
+
+  <div class="card stat-card">
+    <h3>🏆 Wins</h3>
+    <p id="totalWins">0</p>
+  </div>
+
+  <div class="card stat-card">
+    <h3>💀 Losses</h3>
+    <p id="totalLosses">0</p>
+  </div>
+
+  <div class="card stat-card">
+    <h3>⭐ Score</h3>
+    <p id="totalScore">0</p>
+  </div>
+
+</div>
+
+  <h3>Game Stats</h3>
+  <div id="gameStats"></div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
